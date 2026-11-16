@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bce4803-2116-4155-9d82-e3bab4801bd5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/constants.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/telemetry_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/telemetry_data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,75 +23,75 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Deadlyboy834"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Deadlyboy834&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:Deadlyboy834/system-health-and-telemetry-monitor.git",
-    "accountId": "d063794b-db8e-41f7-8f45-715ac028c26f"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Deadlyboy834/system-health-and-telemetry-monitor.git&quot;,
+    &quot;accountId&quot;: &quot;d063794b-db8e-41f7-8f45-715ac028c26f&quot;
   }
-}]]></component>
+}</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.680535971227918E-15" />
-      <entry key="MS500" value="0.0011094361858440878" />
-      <entry key="S2" value="0.20505033237960044" />
-      <entry key="S5" value="1.0154871117693955" />
-      <entry key="S10" value="2.46252876638154" />
-      <entry key="S30" value="6.394843404662734" />
-      <entry key="S60" value="10.726632204979328" />
-      <entry key="M2" value="19.580562151869312" />
-      <entry key="M5" value="45.71230151609736" />
-      <entry key="M10" value="98.46987547226097" />
-      <entry key="M15" value="151.35732336248853" />
-      <entry key="M30" value="260.8460327263789" />
-      <entry key="H1" value="357.208515628431" />
-      <entry key="H2" value="422.1527827305776" />
-      <entry key="H4" value="460.00159015055846" />
-      <entry key="D1" value="494.69203860976546" />
-      <entry key="W1" value="500.9481802417617" />
+      <entry key="MS100" value="1.7900413118633771" />
+      <entry key="MS500" value="1.953959550550202" />
+      <entry key="S2" value="1.9903036246866823" />
+      <entry key="S5" value="2.169518232451571" />
+      <entry key="S10" value="2.8747095976225276" />
+      <entry key="S30" value="4.753607116218066" />
+      <entry key="S60" value="5.78966879072803" />
+      <entry key="M2" value="8.135834853549131" />
+      <entry key="M5" value="23.10136331587952" />
+      <entry key="M10" value="59.76202006321367" />
+      <entry key="M15" value="103.7529944115426" />
+      <entry key="M30" value="225.01704710161596" />
+      <entry key="H1" value="365.5439884087257" />
+      <entry key="H2" value="477.3766535992884" />
+      <entry key="H4" value="548.6947339051624" />
+      <entry key="D1" value="617.9442815506376" />
+      <entry key="W1" value="630.8231044189594" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.000113680613279" />
-      <entry key="S2" value="1.1337265771651157" />
-      <entry key="S5" value="1.6517088445346033" />
-      <entry key="S10" value="2.1583705543911833" />
-      <entry key="S30" value="3.0770379995801003" />
-      <entry key="S60" value="4.430374870870262" />
-      <entry key="M2" value="7.399604142442028" />
-      <entry key="M5" value="16.17062069958169" />
-      <entry key="M10" value="30.255379982507772" />
-      <entry key="M15" value="41.15261385432238" />
-      <entry key="M30" value="59.71550079648869" />
-      <entry key="H1" value="73.84898182371809" />
-      <entry key="H2" value="82.68402656711915" />
-      <entry key="H4" value="87.6402770333337" />
-      <entry key="D1" value="92.07714973951296" />
-      <entry key="W1" value="92.8674191456626" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="1.0964809532235117E-253" />
+      <entry key="S5" value="1.0283254874700913E-101" />
+      <entry key="S10" value="5.385481773085318E-51" />
+      <entry key="S30" value="4.1734867962401335E-17" />
+      <entry key="S60" value="1.6316370832111758E-8" />
+      <entry key="M2" value="4.4905551339345884E-4" />
+      <entry key="M5" value="0.33263144986012005" />
+      <entry key="M10" value="4.339312434877696" />
+      <entry key="M15" value="11.275685773116509" />
+      <entry key="M30" value="31.257903677793653" />
+      <entry key="H1" value="53.42947377101278" />
+      <entry key="H2" value="70.32986929302723" />
+      <entry key="H4" value="80.82818706887677" />
+      <entry key="D1" value="90.843749254997" />
+      <entry key="W1" value="92.68867804638414" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.004334255750265019" />
-      <entry key="MS500" value="0.3370107543412537" />
-      <entry key="S2" value="0.9874076574470277" />
-      <entry key="S5" value="2.3406521798155913" />
-      <entry key="S10" value="4.32626039959733" />
-      <entry key="S30" value="9.230305139429925" />
-      <entry key="S60" value="14.944911136969186" />
-      <entry key="M2" value="26.803849127918994" />
-      <entry key="M5" value="61.73762186498578" />
-      <entry key="M10" value="128.5954421425222" />
-      <entry key="M15" value="192.39530669130556" />
-      <entry key="M30" value="320.4810730272848" />
-      <entry key="H1" value="431.00866076649487" />
-      <entry key="H2" value="504.8097318541689" />
-      <entry key="H4" value="547.62758682853" />
-      <entry key="D1" value="586.7666980157072" />
-      <entry key="W1" value="593.8152408245878" />
+      <entry key="MS100" value="1.1465564846767315" />
+      <entry key="MS500" value="1.7548831697799232" />
+      <entry key="S2" value="1.9357414594275826" />
+      <entry key="S5" value="2.1407635769803353" />
+      <entry key="S10" value="2.844184264169151" />
+      <entry key="S30" value="4.72772930576608" />
+      <entry key="S60" value="5.772592403748877" />
+      <entry key="M2" value="8.12617522296055" />
+      <entry key="M5" value="23.42584732153927" />
+      <entry key="M10" value="64.0791435037957" />
+      <entry key="M15" value="114.99432962078333" />
+      <entry key="M30" value="256.23086836671973" />
+      <entry key="H1" value="418.9369564325437" />
+      <entry key="H2" value="547.682845740331" />
+      <entry key="H4" value="629.5094113253593" />
+      <entry key="D1" value="708.7855148229127" />
+      <entry key="W1" value="723.5114161003778" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -104,22 +103,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;python.packages.toolwindow.project.migrated.to.right.top.v2&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -137,6 +136,8 @@
       <updated>1794586085303</updated>
       <workItem from="1794586086319" duration="48000" />
       <workItem from="1794586142492" duration="3247000" />
+      <workItem from="1794838659506" duration="131000" />
+      <workItem from="1794838813079" duration="1894000" />
     </task>
     <servers />
   </component>
