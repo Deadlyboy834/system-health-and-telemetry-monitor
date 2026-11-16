@@ -1,0 +1,7 @@
+{
+    "warning_thresholds": {
+        "normal": [0, 100],
+        "warning": [100, 200],
+        "critical": [200, 300]
+    }
+}
