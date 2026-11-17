@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bce4803-2116-4155-9d82-e3bab4801bd5" name="Changes" comment="Moving &quot;data stuff&quot; to their own directory">
+    <list default="true" id="1bce4803-2116-4155-9d82-e3bab4801bd5" name="Changes" comment="Fixed &amp; tested telemetry_update()">
+      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/constants.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,61 +40,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="4.1629718070526784E-61" />
-      <entry key="MS500" value="8.392294081727434E-13" />
-      <entry key="S2" value="9.584831581484552E-4" />
-      <entry key="S5" value="0.06657318212318857" />
-      <entry key="S10" value="0.32785631144226374" />
-      <entry key="S30" value="1.398594366217557" />
-      <entry key="S60" value="2.619229411989135" />
-      <entry key="M2" value="6.284613677289709" />
-      <entry key="M5" value="24.413985050284325" />
-      <entry key="M10" value="58.084036750802234" />
-      <entry key="M15" value="93.49028543543383" />
-      <entry key="M30" value="207.03083300557978" />
-      <entry key="H1" value="391.5120209015249" />
-      <entry key="H2" value="583.8448383482339" />
-      <entry key="H4" value="727.9886022092919" />
-      <entry key="D1" value="883.993654031982" />
-      <entry key="W1" value="914.7477829727878" />
+      <entry key="MS100" value="1.0022435514746035" />
+      <entry key="MS500" value="1.2952481653573826" />
+      <entry key="S2" value="1.737134608645552" />
+      <entry key="S5" value="1.8851552793866841" />
+      <entry key="S10" value="1.942526512147443" />
+      <entry key="S30" value="2.1783804008766543" />
+      <entry key="S60" value="2.84243456360739" />
+      <entry key="M2" value="5.269323036818983" />
+      <entry key="M5" value="19.152241741567476" />
+      <entry key="M10" value="46.101750732180314" />
+      <entry key="M15" value="72.16911017651098" />
+      <entry key="M30" value="150.7232992986452" />
+      <entry key="H1" value="319.07896929913164" />
+      <entry key="H2" value="577.439172076718" />
+      <entry key="H4" value="831.262627930964" />
+      <entry key="D1" value="1165.1678955703683" />
+      <entry key="W1" value="1238.274937350555" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000028197632889" />
-      <entry key="S2" value="1.042809464665737" />
-      <entry key="S5" value="1.3722861281688221" />
-      <entry key="S10" value="1.9360573273026747" />
-      <entry key="S30" value="3.1595380831353936" />
-      <entry key="S60" value="3.865919729676988" />
-      <entry key="M2" value="4.458022128609191" />
-      <entry key="M5" value="5.496059299461442" />
-      <entry key="M10" value="6.59056633730416" />
-      <entry key="M15" value="8.003845895198385" />
-      <entry key="M30" value="16.906501778706286" />
-      <entry key="H1" value="37.34329164188774" />
-      <entry key="H2" value="60.97543168765331" />
-      <entry key="H4" value="79.26982509235104" />
-      <entry key="D1" value="99.3418775973406" />
-      <entry key="W1" value="103.32006114127222" />
+      <entry key="MS100" value="8.1551387058731E-310" />
+      <entry key="MS500" value="1.5225277540499518E-62" />
+      <entry key="S2" value="4.0713043413927376E-16" />
+      <entry key="S5" value="9.735165323173747E-7" />
+      <entry key="S10" value="0.001372880500537315" />
+      <entry key="S30" value="0.1768024192185275" />
+      <entry key="S60" value="0.6355858526239123" />
+      <entry key="M2" value="1.6549937603243141" />
+      <entry key="M5" value="6.112826806649089" />
+      <entry key="M10" value="13.96173083306871" />
+      <entry key="M15" value="21.015782312030538" />
+      <entry key="M30" value="37.657447456196245" />
+      <entry key="H1" value="62.86770641539599" />
+      <entry key="H2" value="96.9097678564403" />
+      <entry key="H4" value="129.47523244081145" />
+      <entry key="D1" value="172.06332801683507" />
+      <entry key="W1" value="181.37863745050169" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.6823484532566295E-7" />
-      <entry key="MS500" value="0.048496721993862395" />
-      <entry key="S2" value="0.5031696983818068" />
-      <entry key="S5" value="1.1319758084975835" />
-      <entry key="S10" value="2.0552596674880066" />
-      <entry key="S30" value="4.430239928924512" />
-      <entry key="S60" value="6.393575371034405" />
-      <entry key="M2" value="10.679092719533267" />
-      <entry key="M5" value="29.869624275810814" />
-      <entry key="M10" value="64.64602185956714" />
-      <entry key="M15" value="101.46861186521978" />
-      <entry key="M30" value="223.90939505238413" />
-      <entry key="H1" value="428.8262066820886" />
-      <entry key="H2" value="644.797409343254" />
-      <entry key="H4" value="807.2438516627146" />
-      <entry key="D1" value="983.3325343887236" />
-      <entry key="W1" value="1018.0673999543328" />
+      <entry key="MS100" value="0.09878949804312383" />
+      <entry key="MS500" value="0.7573594493059842" />
+      <entry key="S2" value="1.4888100546874927" />
+      <entry key="S5" value="1.7689244841741218" />
+      <entry key="S10" value="1.8823287885496696" />
+      <entry key="S30" value="2.3266282028433274" />
+      <entry key="S60" value="3.453552642057055" />
+      <entry key="M2" value="6.896987784529821" />
+      <entry key="M5" value="25.220933457602285" />
+      <entry key="M10" value="60.010218169041394" />
+      <entry key="M15" value="93.13008085141557" />
+      <entry key="M30" value="188.32951551430838" />
+      <entry key="H1" value="381.902289920911" />
+      <entry key="H2" value="674.3142023845571" />
+      <entry key="H4" value="960.7145979654229" />
+      <entry key="D1" value="1337.2260801507837" />
+      <entry key="W1" value="1419.6528007523764" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -103,30 +106,59 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.jshint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.jshint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
-    "settings.editor.selected.configurable": "preferences.sourceCode.JSON"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;python.packages.toolwindow.project.migrated.to.right.top.v2&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\hle\Programs\Python\SystemHealth&amp;TelemetryMonitor\src\data" />
+      <recent name="C:\Users\hle\Programs\Python\SystemHealth&amp;TelemetryMonitor\src" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="SystemHealth&amp;TelemetryMonitor" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="~\Programs\Python\SystemHealth&amp;TelemetryMonitor\.venv" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="RUN_AS_SCRIPT" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -146,7 +178,9 @@
       <workItem from="1794586086319" duration="48000" />
       <workItem from="1794586142492" duration="3247000" />
       <workItem from="1794838659506" duration="131000" />
-      <workItem from="1794838813079" duration="5279000" />
+      <workItem from="1794838813079" duration="6641000" />
+      <workItem from="1794925047192" duration="4561000" />
+      <workItem from="1794929621549" duration="1637000" />
     </task>
     <task id="LOCAL-00001" summary="Added ResourceUsageLevels constants &amp; the levels thresholds into constants.py">
       <option name="closed" value="true" />
@@ -188,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794843405909</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixed &amp; tested telemetry_update()">
+      <option name="closed" value="true" />
+      <created>1794844242341</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1794844242341</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,9 +253,10 @@
     <MESSAGE value="Add .gitignore to ignore log files" />
     <MESSAGE value="Remove .log from .gitignore (because using .csv instead) and adding .csv" />
     <MESSAGE value="Moving &quot;data stuff&quot; to their own directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moving &quot;data stuff&quot; to their own directory" />
+    <MESSAGE value="Fixed &amp; tested telemetry_update()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed &amp; tested telemetry_update()" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SystemHealth_TelemetryMonitor$main.coverage" NAME="main Coverage Results" MODIFIED="1794844077319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/SystemHealth_TelemetryMonitor$main.coverage" NAME="main Coverage Results" MODIFIED="1794931203844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
