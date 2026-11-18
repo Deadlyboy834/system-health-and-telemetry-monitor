@@ -1,6 +1,6 @@
 from rich.table import Table
 
-from src.data.telemetry_data import SystemTelemetry
+from src.telemetry.system_telemetry_manager import SystemTelemetry
 
 def get_telemetry_table(telemetry_info: SystemTelemetry, width: int) -> Table:
     table: Table = Table(width=width, show_lines=True).grid(padding=(0, 2), expand=False)
