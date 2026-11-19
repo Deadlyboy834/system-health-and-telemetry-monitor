@@ -13,6 +13,15 @@ class Telemetry:
     USER_HEADERS: Final[list[str]] = list[str](HEADERS.values())
 
 class ResourceUsageLevels:
-    NORMAL: Final[str] = "NORMAL"
-    WARNING: Final[str] = "WARNING"
-    CRITICAL: Final[str] = "CRITICAL"
+    USAGE_LEVELS_DICT: Final[dict[str, str]] = CONFIG_DICT["resource_usage_levels"]
+
+    NORMAL: Final[str] = USAGE_LEVELS_DICT["normal"]
+    WARNING: Final[str] = USAGE_LEVELS_DICT["warning"]
+    CRITICAL: Final[str] = USAGE_LEVELS_DICT["critical"]
+
+class WarningThresholds:
+    WARNING_THRESHOLDS_DICT: Final[dict[str, list[int]]] = CONFIG_DICT["warning_thresholds"]
+
+    NORMAL: Final[tuple[int]] = tuple(WARNING_THRESHOLDS_DICT["normal"])
+    WARNING: Final[tuple[int]] = tuple(WARNING_THRESHOLDS_DICT["warning"])
+    CRITICAL: Final[tuple[int]] = tuple(WARNING_THRESHOLDS_DICT["critical"])

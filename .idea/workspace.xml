@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bce4803-2116-4155-9d82-e3bab4801bd5" name="Changes" comment="Fixed circular imports. Logging functionality is working. Need to fix headers">
+    <list default="true" id="1bce4803-2116-4155-9d82-e3bab4801bd5" name="Changes" comment="Fixed &amp; finished logging capabilities">
+      <change afterPath="$PROJECT_DIR$/src/telemetry/system_health_classifier.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/math_models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/telemetry/system_telemetry_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/telemetry/system_telemetry_manager.py" afterDir="false" />
@@ -40,61 +42,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="2.93826932733201E-70" />
-      <entry key="MS500" value="1.2405615608681753E-14" />
-      <entry key="S2" value="3.337486780891084E-4" />
-      <entry key="S5" value="0.041364922033110485" />
-      <entry key="S10" value="0.23593733429699135" />
-      <entry key="S30" value="1.5338016345420609" />
-      <entry key="S60" value="3.619052799025279" />
-      <entry key="M2" value="7.4797431485476364" />
-      <entry key="M5" value="18.797310345218076" />
-      <entry key="M10" value="38.43057458668058" />
-      <entry key="M15" value="57.30649244693691" />
-      <entry key="M30" value="120.26291320082561" />
-      <entry key="H1" value="286.1772935797419" />
-      <entry key="H2" value="632.892419897732" />
-      <entry key="H4" value="1123.0992367872786" />
-      <entry key="D1" value="2051.709273803683" />
-      <entry key="W1" value="2303.3255403070125" />
+      <entry key="MS100" value="1.0028397900728911" />
+      <entry key="MS500" value="1.3094975727093614" />
+      <entry key="S2" value="1.7458726936602367" />
+      <entry key="S5" value="1.8942073446009153" />
+      <entry key="S10" value="2.0859062569112794" />
+      <entry key="S30" value="3.875908169880187" />
+      <entry key="S60" value="6.765708584045602" />
+      <entry key="M2" value="13.41248869883351" />
+      <entry key="M5" value="34.82988888388133" />
+      <entry key="M10" value="59.66482197623244" />
+      <entry key="M15" value="80.6742740617126" />
+      <entry key="M30" value="145.0612296251115" />
+      <entry key="H1" value="291.4172505373705" />
+      <entry key="H2" value="617.2057576896883" />
+      <entry key="H4" value="1135.0507559602781" />
+      <entry key="D1" value="2239.392805659667" />
+      <entry key="W1" value="2559.1675017549273" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0000000000000004" />
-      <entry key="MS500" value="1.000818914242618" />
-      <entry key="S2" value="1.1691646467235537" />
-      <entry key="S5" value="1.4912937850987746" />
-      <entry key="S10" value="1.7061049314395729" />
-      <entry key="S30" value="2.1772712790279183" />
-      <entry key="S60" value="2.8651759665757837" />
-      <entry key="M2" value="3.840602192596268" />
-      <entry key="M5" value="5.740913187798749" />
-      <entry key="M10" value="8.807022230397347" />
-      <entry key="M15" value="12.121830445461784" />
-      <entry key="M30" value="24.796545316733223" />
-      <entry key="H1" value="57.04321453494134" />
-      <entry key="H2" value="117.70699694172255" />
-      <entry key="H4" value="196.39079656643432" />
-      <entry key="D1" value="336.44518436511817" />
-      <entry key="W1" value="373.33654171414486" />
+      <entry key="MS100" value="1.4280223333728436E-111" />
+      <entry key="MS500" value="6.933885195166706E-23" />
+      <entry key="S2" value="4.303375392314782E-6" />
+      <entry key="S5" value="0.01377609038663422" />
+      <entry key="S10" value="0.22551144991993052" />
+      <entry key="S30" value="1.6080819720705064" />
+      <entry key="S60" value="3.6433878761599154" />
+      <entry key="M2" value="8.420850707272393" />
+      <entry key="M5" value="20.93148213218424" />
+      <entry key="M10" value="32.40046559096493" />
+      <entry key="M15" value="38.92788308349136" />
+      <entry key="M30" value="52.059011063555836" />
+      <entry key="H1" value="78.28951139706476" />
+      <entry key="H2" value="134.8308605325105" />
+      <entry key="H4" value="219.38757954757352" />
+      <entry key="D1" value="389.4111835306035" />
+      <entry key="W1" value="437.2460738369405" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.0027241087233406346" />
-      <entry key="MS500" value="0.3070905891791537" />
-      <entry key="S2" value="0.8564239449520236" />
-      <entry key="S5" value="1.340028218294663" />
-      <entry key="S10" value="1.8063704483189058" />
-      <entry key="S30" value="3.6084135149851595" />
-      <entry key="S60" value="6.397622766670523" />
-      <entry key="M2" value="11.254035944650418" />
-      <entry key="M5" value="24.494755223476606" />
-      <entry key="M10" value="47.20458623619884" />
-      <entry key="M15" value="69.39856952362265" />
-      <entry key="M30" value="145.02928378078067" />
-      <entry key="H1" value="343.18465053096" />
-      <entry key="H2" value="750.5607377756899" />
-      <entry key="H4" value="1319.456838528696" />
-      <entry key="D1" value="2388.1447724811223" />
-      <entry key="W1" value="2676.660541782693" />
+      <entry key="MS100" value="0.9619507244388186" />
+      <entry key="MS500" value="1.2978008288383445" />
+      <entry key="S2" value="1.7417325023188064" />
+      <entry key="S5" value="1.9028346852639693" />
+      <entry key="S10" value="2.2803173851133494" />
+      <entry key="S30" value="5.4049204750265485" />
+      <entry key="S60" value="10.310690894171177" />
+      <entry key="M2" value="21.712018579475703" />
+      <entry key="M5" value="55.63577689637318" />
+      <entry key="M10" value="91.96517394526936" />
+      <entry key="M15" value="119.5194984211671" />
+      <entry key="M30" value="197.06059141587153" />
+      <entry key="H1" value="369.6585619579753" />
+      <entry key="H2" value="751.9928695400674" />
+      <entry key="H4" value="1354.4015803737293" />
+      <entry key="D1" value="2628.7928342359533" />
+      <entry key="W1" value="2996.4117794585595" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -109,27 +111,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;python.packages.toolwindow.project.migrated.to.right.top.v2&quot;: &quot;true&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "preferences.toDoOptions"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\hle\Programs\Python\SystemHealth&amp;TelemetryMonitor\src" />
@@ -187,7 +189,7 @@
       <workItem from="1794925047192" duration="4561000" />
       <workItem from="1794929621549" duration="1637000" />
       <workItem from="1795011725234" duration="8135000" />
-      <workItem from="1795097855887" duration="5480000" />
+      <workItem from="1795097855887" duration="8753000" />
     </task>
     <task id="LOCAL-00001" summary="Added ResourceUsageLevels constants &amp; the levels thresholds into constants.py">
       <option name="closed" value="true" />
@@ -277,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795101284589</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fixed &amp; finished logging capabilities">
+      <option name="closed" value="true" />
+      <created>1795103466155</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1795103466155</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,9 +316,10 @@
     <MESSAGE value="Added a module for future CLI interface. Not implemented yet" />
     <MESSAGE value="Added initialization &amp; getting headers functionality" />
     <MESSAGE value="Fixed circular imports. Logging functionality is working. Need to fix headers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed circular imports. Logging functionality is working. Need to fix headers" />
+    <MESSAGE value="Fixed &amp; finished logging capabilities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed &amp; finished logging capabilities" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SystemHealth_TelemetryMonitor$main.coverage" NAME="main Coverage Results" MODIFIED="1795103139023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/SystemHealth_TelemetryMonitor$main.coverage" NAME="main Coverage Results" MODIFIED="1795107814152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

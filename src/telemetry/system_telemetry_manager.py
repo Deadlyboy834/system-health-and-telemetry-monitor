@@ -4,7 +4,8 @@ import time
 from dataclasses import dataclass, field, astuple
 from datetime import timedelta, datetime
 from typing import Any
-from src.config import Telemetry
+from src.config import Telemetry, ResourceUsageLevels, WarningThresholds
+from src.telemetry.system_health_classifier import classify
 from src.utils.file_io import update_logs
 
 import psutil
@@ -21,6 +22,8 @@ class SystemTelemetry:
     num_cpu_cores: int = field(init=False)
     total_ram: float | int = field(init=False)
     disk_capacity: float | int = field(init=False)
+    status_number: float | int = field(init=False)
+    system_status: str = field(init=False)
 
     from src.utils.file_io import initialize_headers
     initialize_headers(Telemetry.SYSTEM_HEADERS)
@@ -55,6 +58,19 @@ def get_updated_telemetry(telemetry_data: SystemTelemetry) -> SystemTelemetry:
     telemetry_data.num_cpu_cores = psutil.cpu_count() or -1
     telemetry_data.total_ram = virtual_memory.total
     telemetry_data.disk_capacity = disk_usage_info[1]
+    telemetry_data.status_number = classify(
+        telemetry_data.cpu_usage_percentage,
+        telemetry_data.ram_usage_percentage,
+        telemetry_data.disk_usage_percentage
+    )
+
+    telemetry_data.system_status = (
+        ResourceUsageLevels.CRITICAL
+        if telemetry_data.status_number >= WarningThresholds.CRITICAL[0]
+        else ResourceUsageLevels.WARNING
+        if telemetry_data.status_number >= WarningThresholds.WARNING[0]
+        else ResourceUsageLevels.NORMAL
+    )
 
     return telemetry_data
 
@@ -64,7 +80,8 @@ def log_telemetry(telemetry_data: SystemTelemetry) -> None:
     headers: list[str] = list[str](Telemetry.SYSTEM_HEADERS)
     new_log_entry: dict[str, Any] = {}
 
-    for index in range(len(values)):
+    # NOTE: remove the -2 after finishing classifier
+    for index in range(len(values) - 2):
         new_log_entry[headers[index]] = values[index]
 
     update_logs(new_log_entry, headers=headers)

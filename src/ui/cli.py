@@ -18,7 +18,9 @@ def get_telemetry_table(telemetry_info: SystemTelemetry, width: int) -> Table:
         "Operating System:",
         "CPU Cores:",
         "Total RAM:",
-        "Disk Capacity:"
+        "Disk Capacity:",
+        "Status Number: ",
+        "System Status: "
     ]
 
     values: list[str] = [
@@ -30,7 +32,9 @@ def get_telemetry_table(telemetry_info: SystemTelemetry, width: int) -> Table:
         telemetry_info.system_os,
         str(telemetry_info.num_cpu_cores),
         f"{telemetry_info.total_ram:,} bytes",
-        f"{telemetry_info.disk_capacity:,} bytes"
+        f"{telemetry_info.disk_capacity:,} bytes",
+        f"{telemetry_info.status_number}",
+        f"{telemetry_info.system_status}"
     ]
 
     for index in range(len(keys)):
