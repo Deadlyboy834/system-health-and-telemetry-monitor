@@ -4,7 +4,7 @@ import time
 from dataclasses import dataclass, field, astuple
 from datetime import timedelta
 from typing import Any
-from src.constants import Telemetry
+from src.config import Telemetry
 from src.utils.file_io import update_logs
 
 import psutil
@@ -56,11 +56,11 @@ def get_updated_telemetry(telemetry_data: SystemTelemetry) -> SystemTelemetry:
     return telemetry_data
 
 def log_telemetry(telemetry_data: SystemTelemetry) -> None:
-    values: list[Any] = [entry[1] for entry in astuple(telemetry_data)]
+    values: list[Any] = [entry for entry in astuple(telemetry_data)]
     headers: list[str] = Telemetry.HEADERS
     new_log_entry: dict[str, Any] = {}
 
     for index in range(len(values)):
         new_log_entry[headers[index]] = values[index]
 
-    update_logs(new_log_entry)
+    update_logs(new_log_entry, headers=headers)

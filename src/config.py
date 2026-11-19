@@ -1,11 +1,10 @@
 from typing import Final, Any
-from src.utils.paths import CONFIG
+from src.utils.file_io import get_config
 
-class Constants:
-    CONFIG_DICT: dict[str, Any] = CONFIG
+CONFIG_DICT: dict[str, Any] = get_config()
 
 class Telemetry:
-    TELEMETRY_DICT: Final[dict[str, Any]] = Constants.CONFIG_DICT["Telemetry"]
+    TELEMETRY_DICT: Final[dict[str, Any]] = CONFIG_DICT["telemetry"]
 
     UPDATE_FREQUENCY: Final[float | int] = TELEMETRY_DICT["update_frequency"]        # seconds
     UI_REFRESH_FREQUENCY: Final[float | int] = TELEMETRY_DICT["ui_refresh_frequency"]   # refreshes per second
