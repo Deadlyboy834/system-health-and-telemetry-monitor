@@ -2,7 +2,7 @@ import platform
 import socket
 import time
 from dataclasses import dataclass, field, astuple
-from datetime import timedelta
+from datetime import timedelta, datetime
 from typing import Any
 from src.config import Telemetry
 from src.utils.file_io import update_logs
@@ -21,6 +21,9 @@ class SystemTelemetry:
     num_cpu_cores: int = field(init=False)
     total_ram: float | int = field(init=False)
     disk_capacity: float | int = field(init=False)
+
+    from src.utils.file_io import initialize_headers
+    initialize_headers(Telemetry.SYSTEM_HEADERS)
 
 def get_updated_telemetry(telemetry_data: SystemTelemetry) -> SystemTelemetry:
     def get_disk_usage_info() -> tuple[float | int, int]:
@@ -57,7 +60,8 @@ def get_updated_telemetry(telemetry_data: SystemTelemetry) -> SystemTelemetry:
 
 def log_telemetry(telemetry_data: SystemTelemetry) -> None:
     values: list[Any] = [entry for entry in astuple(telemetry_data)]
-    headers: list[str] = Telemetry.HEADERS
+    values.append(datetime.now())
+    headers: list[str] = list[str](Telemetry.SYSTEM_HEADERS)
     new_log_entry: dict[str, Any] = {}
 
     for index in range(len(values)):

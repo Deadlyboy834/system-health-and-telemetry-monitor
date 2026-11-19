@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bce4803-2116-4155-9d82-e3bab4801bd5" name="Changes" comment="Added initialization &amp; getting headers functionality">
+    <list default="true" id="1bce4803-2116-4155-9d82-e3bab4801bd5" name="Changes" comment="Fixed circular imports. Logging functionality is working. Need to fix headers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/telemetry/system_telemetry_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/telemetry/system_telemetry_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/file_io.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/file_io.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/cli.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/cli.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,61 +40,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000135534324" />
-      <entry key="S2" value="1.0315880786715932" />
-      <entry key="S5" value="1.7880768453311915" />
-      <entry key="S10" value="4.17259905585354" />
-      <entry key="S30" value="13.602014862879312" />
-      <entry key="S60" value="20.857768495773815" />
-      <entry key="M2" value="26.469226388712876" />
-      <entry key="M5" value="31.66780486511426" />
-      <entry key="M10" value="38.48734424997137" />
-      <entry key="M15" value="51.17655004201189" />
-      <entry key="M30" value="119.49634440805627" />
-      <entry key="H1" value="306.39745551877695" />
-      <entry key="H2" value="663.7186442492766" />
-      <entry key="H4" value="1136.7412464989297" />
-      <entry key="D1" value="1984.7864912813275" />
-      <entry key="W1" value="2207.764673627943" />
+      <entry key="MS100" value="2.93826932733201E-70" />
+      <entry key="MS500" value="1.2405615608681753E-14" />
+      <entry key="S2" value="3.337486780891084E-4" />
+      <entry key="S5" value="0.041364922033110485" />
+      <entry key="S10" value="0.23593733429699135" />
+      <entry key="S30" value="1.5338016345420609" />
+      <entry key="S60" value="3.619052799025279" />
+      <entry key="M2" value="7.4797431485476364" />
+      <entry key="M5" value="18.797310345218076" />
+      <entry key="M10" value="38.43057458668058" />
+      <entry key="M15" value="57.30649244693691" />
+      <entry key="M30" value="120.26291320082561" />
+      <entry key="H1" value="286.1772935797419" />
+      <entry key="H2" value="632.892419897732" />
+      <entry key="H4" value="1123.0992367872786" />
+      <entry key="D1" value="2051.709273803683" />
+      <entry key="W1" value="2303.3255403070125" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="2.0011780290892379E-16" />
-      <entry key="MS500" value="7.253471839868126E-4" />
-      <entry key="S2" value="0.19206366312699852" />
-      <entry key="S5" value="0.8469610106375753" />
-      <entry key="S10" value="1.8786854252353433" />
-      <entry key="S30" value="4.171718246363717" />
-      <entry key="S60" value="5.347324250093922" />
-      <entry key="M2" value="6.153774750133484" />
-      <entry key="M5" value="7.118894739038772" />
-      <entry key="M10" value="8.864366162904126" />
-      <entry key="M15" value="12.18793479356632" />
-      <entry key="M30" value="27.773521986151763" />
-      <entry key="H1" value="63.88024610279375" />
-      <entry key="H2" value="124.96447213192316" />
-      <entry key="H4" value="199.26417024813895" />
-      <entry key="D1" value="324.99737965452874" />
-      <entry key="W1" value="357.2128531832052" />
+      <entry key="MS100" value="1.0000000000000004" />
+      <entry key="MS500" value="1.000818914242618" />
+      <entry key="S2" value="1.1691646467235537" />
+      <entry key="S5" value="1.4912937850987746" />
+      <entry key="S10" value="1.7061049314395729" />
+      <entry key="S30" value="2.1772712790279183" />
+      <entry key="S60" value="2.8651759665757837" />
+      <entry key="M2" value="3.840602192596268" />
+      <entry key="M5" value="5.740913187798749" />
+      <entry key="M10" value="8.807022230397347" />
+      <entry key="M15" value="12.121830445461784" />
+      <entry key="M30" value="24.796545316733223" />
+      <entry key="H1" value="57.04321453494134" />
+      <entry key="H2" value="117.70699694172255" />
+      <entry key="H4" value="196.39079656643432" />
+      <entry key="D1" value="336.44518436511817" />
+      <entry key="W1" value="373.33654171414486" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.21315872294198915" />
-      <entry key="MS500" value="0.734235967310418" />
-      <entry key="S2" value="1.077876417347003" />
-      <entry key="S5" value="2.40772389375885" />
-      <entry key="S10" value="5.779077908960833" />
-      <entry key="S30" value="17.541195272440362" />
-      <entry key="S60" value="26.043567020744526" />
-      <entry key="M2" value="32.52534194898665" />
-      <entry key="M5" value="38.73946912253037" />
-      <entry key="M10" value="47.32077781524675" />
-      <entry key="M15" value="63.335263934738805" />
-      <entry key="M30" value="147.23553507419638" />
-      <entry key="H1" value="370.23666320799157" />
-      <entry key="H2" value="788.6413313913736" />
-      <entry key="H4" value="1335.9712977082122" />
-      <entry key="D1" value="2309.7744327573746" />
-      <entry key="W1" value="2564.9760412012724" />
+      <entry key="MS100" value="0.0027241087233406346" />
+      <entry key="MS500" value="0.3070905891791537" />
+      <entry key="S2" value="0.8564239449520236" />
+      <entry key="S5" value="1.340028218294663" />
+      <entry key="S10" value="1.8063704483189058" />
+      <entry key="S30" value="3.6084135149851595" />
+      <entry key="S60" value="6.397622766670523" />
+      <entry key="M2" value="11.254035944650418" />
+      <entry key="M5" value="24.494755223476606" />
+      <entry key="M10" value="47.20458623619884" />
+      <entry key="M15" value="69.39856952362265" />
+      <entry key="M30" value="145.02928378078067" />
+      <entry key="H1" value="343.18465053096" />
+      <entry key="H2" value="750.5607377756899" />
+      <entry key="H4" value="1319.456838528696" />
+      <entry key="D1" value="2388.1447724811223" />
+      <entry key="W1" value="2676.660541782693" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -188,7 +187,7 @@
       <workItem from="1794925047192" duration="4561000" />
       <workItem from="1794929621549" duration="1637000" />
       <workItem from="1795011725234" duration="8135000" />
-      <workItem from="1795097855887" duration="3246000" />
+      <workItem from="1795097855887" duration="5480000" />
     </task>
     <task id="LOCAL-00001" summary="Added ResourceUsageLevels constants &amp; the levels thresholds into constants.py">
       <option name="closed" value="true" />
@@ -270,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795017396467</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fixed circular imports. Logging functionality is working. Need to fix headers">
+      <option name="closed" value="true" />
+      <created>1795101284588</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1795101284589</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,9 +305,10 @@
     <MESSAGE value="Added data management &amp; save &amp; write functionality" />
     <MESSAGE value="Added a module for future CLI interface. Not implemented yet" />
     <MESSAGE value="Added initialization &amp; getting headers functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added initialization &amp; getting headers functionality" />
+    <MESSAGE value="Fixed circular imports. Logging functionality is working. Need to fix headers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed circular imports. Logging functionality is working. Need to fix headers" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SystemHealth_TelemetryMonitor$main.coverage" NAME="main Coverage Results" MODIFIED="1795100431937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/SystemHealth_TelemetryMonitor$main.coverage" NAME="main Coverage Results" MODIFIED="1795103139023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

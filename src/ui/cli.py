@@ -8,6 +8,7 @@ def get_telemetry_table(telemetry_info: SystemTelemetry, width: int) -> Table:
     table.add_column(justify="left", style="")
     table.add_column(justify="right")
 
+    # TODO: get the keys from the config.py headers instead of hard-code
     keys: list[str] = [
         "CPU Usage:",
         "RAM Usage:",

@@ -8,7 +8,9 @@ class Telemetry:
 
     UPDATE_FREQUENCY: Final[float | int] = TELEMETRY_DICT["update_frequency"]        # seconds
     UI_REFRESH_FREQUENCY: Final[float | int] = TELEMETRY_DICT["ui_refresh_frequency"]   # refreshes per second
-    HEADERS: Final[list[str]] = TELEMETRY_DICT["headers"]
+    HEADERS: Final[dict[str, str]] = TELEMETRY_DICT["headers"]
+    SYSTEM_HEADERS: Final[list[str]] = list[str](HEADERS.keys())
+    USER_HEADERS: Final[list[str]] = list[str](HEADERS.values())
 
 class ResourceUsageLevels:
     NORMAL: Final[str] = "NORMAL"
