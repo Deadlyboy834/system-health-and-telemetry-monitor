@@ -1,5 +1,4 @@
-def classify(cpu: float | int, ram: float | int, disk: float | int) -> int:
-    from math import floor
+def get_raw_status_number(cpu: float | int, ram: float | int, disk: float | int) -> int | float:
     import src.utils.math_models as m
 
     cpu_gain: float | int
@@ -20,6 +19,20 @@ def classify(cpu: float | int, ram: float | int, disk: float | int) -> int:
     cpu_gain = normalize_cpu()
     ram_gain = normalize_ram()
     disk_gain = normalize_disk()
-    raw_status_sum = floor(cpu_gain + ram_gain + disk_gain)
 
-    return 3 if raw_status_sum >= 6 else 2 if raw_status_sum >= 3 else 1
+    return cpu_gain + ram_gain + disk_gain
+
+def classify(raw_status_number: float | int) -> str:
+    from math import floor
+    from src.config import ResourceUsageLevels
+
+    raw_status_sum = floor(raw_status_number)
+
+    # TODO: Use values from CONFIG instead of magic numbers like 6 or 3
+    return (
+        ResourceUsageLevels.CRITICAL
+        if raw_status_sum >= 6
+        else ResourceUsageLevels.WARNING
+        if raw_status_sum >= 3
+        else ResourceUsageLevels.NORMAL
+    )

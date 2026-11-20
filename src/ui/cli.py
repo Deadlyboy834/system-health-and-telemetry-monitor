@@ -33,7 +33,7 @@ def get_telemetry_table(telemetry_info: SystemTelemetry, width: int) -> Table:
         str(telemetry_info.num_cpu_cores),
         f"{telemetry_info.total_ram:,} bytes",
         f"{telemetry_info.disk_capacity:,} bytes",
-        f"{telemetry_info.status_number}",
+        f"{telemetry_info.status_number: .2f}",
         f"{telemetry_info.system_status}"
     ]
 

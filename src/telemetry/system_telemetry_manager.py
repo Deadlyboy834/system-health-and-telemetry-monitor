@@ -5,7 +5,7 @@ from dataclasses import dataclass, field, astuple
 from datetime import timedelta, datetime
 from typing import Any
 from src.config import Telemetry, ResourceUsageLevels, WarningThresholds
-from src.telemetry.system_health_classifier import classify
+from src.telemetry.system_health_classifier import classify, get_raw_status_number
 from src.utils.file_io import update_logs
 
 import psutil
@@ -58,19 +58,13 @@ def get_updated_telemetry(telemetry_data: SystemTelemetry) -> SystemTelemetry:
     telemetry_data.num_cpu_cores = psutil.cpu_count() or -1
     telemetry_data.total_ram = virtual_memory.total
     telemetry_data.disk_capacity = disk_usage_info[1]
-    telemetry_data.status_number = classify(
+    telemetry_data.status_number = get_raw_status_number(
         telemetry_data.cpu_usage_percentage,
         telemetry_data.ram_usage_percentage,
         telemetry_data.disk_usage_percentage
     )
 
-    telemetry_data.system_status = (
-        ResourceUsageLevels.CRITICAL
-        if telemetry_data.status_number == WarningThresholds.CRITICAL
-        else ResourceUsageLevels.WARNING
-        if telemetry_data.status_number == WarningThresholds.WARNING
-        else ResourceUsageLevels.NORMAL
-    )
+    telemetry_data.system_status = classify(telemetry_data.status_number)
 
     return telemetry_data
 
