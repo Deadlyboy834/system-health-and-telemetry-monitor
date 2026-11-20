@@ -20,8 +20,8 @@ class ResourceUsageLevels:
     CRITICAL: Final[str] = USAGE_LEVELS_DICT["critical"]
 
 class WarningThresholds:
-    WARNING_THRESHOLDS_DICT: Final[dict[str, list[int]]] = CONFIG_DICT["warning_thresholds"]
+    WARNING_THRESHOLDS_DICT: Final[dict[str, int]] = CONFIG_DICT["warning_thresholds"]
 
-    NORMAL: Final[tuple[int]] = tuple(WARNING_THRESHOLDS_DICT["normal"])
-    WARNING: Final[tuple[int]] = tuple(WARNING_THRESHOLDS_DICT["warning"])
-    CRITICAL: Final[tuple[int]] = tuple(WARNING_THRESHOLDS_DICT["critical"])
+    NORMAL: Final[int] = WARNING_THRESHOLDS_DICT["normal"]
+    WARNING: Final[int] = WARNING_THRESHOLDS_DICT["warning"]
+    CRITICAL: Final[int] = WARNING_THRESHOLDS_DICT["critical"]

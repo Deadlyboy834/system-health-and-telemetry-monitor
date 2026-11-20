@@ -66,9 +66,9 @@ def get_updated_telemetry(telemetry_data: SystemTelemetry) -> SystemTelemetry:
 
     telemetry_data.system_status = (
         ResourceUsageLevels.CRITICAL
-        if telemetry_data.status_number >= WarningThresholds.CRITICAL[0]
+        if telemetry_data.status_number == WarningThresholds.CRITICAL
         else ResourceUsageLevels.WARNING
-        if telemetry_data.status_number >= WarningThresholds.WARNING[0]
+        if telemetry_data.status_number == WarningThresholds.WARNING
         else ResourceUsageLevels.NORMAL
     )
 
